@@ -58,7 +58,7 @@ document.getElementById("input").addEventListener("click", function () {
     ballBonus.innerText = "?";
     minus.classList += "minus";
     minus.innerText = "-";
-    minus.onClick = minusClick("lotto" + 1);
+    minus.onClick = minusClick(container);
     container.appendChild(ballBlue1);
     container.appendChild(ballBlue2);
     container.appendChild(ballBlue3);
@@ -89,7 +89,6 @@ document.getElementById("btn").addEventListener("click", function () {
   }
 });
 
-function minusClick(id) {
-  const element = document.getElementById(id);
+function minusClick(element) {
   element.remove();
 }
