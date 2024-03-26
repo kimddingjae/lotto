@@ -56,6 +56,9 @@ document.getElementById("input").addEventListener("click", function () {
     const ballBonus = document.createElement("div");
     ballBonus.classList += "ball bonus";
     ballBonus.innerText = "?";
+    minus.classList += "minus";
+    minus.innerText = "-";
+    container.appendChild(minus);
     container.appendChild(ballBlue1);
     container.appendChild(ballBlue2);
     container.appendChild(ballBlue3);
@@ -65,9 +68,8 @@ document.getElementById("input").addEventListener("click", function () {
     container.appendChild(plus);
     container.appendChild(ballBonus);
     container.classList += "numbers";
-    minus.classList += "minus";
-    minus.innerText = "-";
-    box.appendChild(minus);
+    
+    
     box.appendChild(container);
   }
 });
