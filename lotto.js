@@ -31,6 +31,7 @@ document.getElementById("input").addEventListener("click", function () {
   const cnt = price.value / 1000;
   for (var i = 0; i < cnt; i++) {
     const container = document.createElement("div");
+    const minus     = document.createElement("div");
     const ballBlue1 = document.createElement("div");
     ballBlue1.classList += "ball blue";
     ballBlue1.innerText = "?";
@@ -64,18 +65,21 @@ document.getElementById("input").addEventListener("click", function () {
     container.appendChild(plus);
     container.appendChild(ballBonus);
     container.classList += "numbers";
+    minus.classList += "minus";
+    box.appenChild(minus);
     box.appendChild(container);
   }
 });
 
 document.getElementById("btn").addEventListener("click", function () {
   if (tmp === 1) {
+    const cnt = price.value / 1000;
     numbers = Array.from({ length: 45 }, (_, i) => i + 1);
     tmp = 0;
-    //btn.classList.add("hide");
+    btn.classList.add("hide");
     lottery();
-    //setTimeout(function () {
-    //  (tmp = 1), btn.classList.remove("hide");
-    //}, 7500);
+    setTimeout(function () {
+      (tmp = 1), btn.classList.remove("hide");
+    }, 7500 * cnt);
   }
 });
