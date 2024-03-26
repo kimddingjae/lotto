@@ -7,7 +7,7 @@ function decryptEffect(element, time) {
   const effect = setInterval(() => {
     element.innerText = Math.floor(Math.random() * 44 + 1);
   }, 10);
-
+  console.log("time    :::::::   " + time)
   setTimeout(() => {
     const random = Math.floor(Math.random() * numbers.length);
 
@@ -80,7 +80,7 @@ document.getElementById("btn").addEventListener("click", function () {
   if (tmp === 1) {
     
     const cnt = document.getElementsByClassName("numbers").length;
-    
+    console.log(cnt)
     numbers = Array.from({ length: 45 }, (_, i) => i + 1);
     tmp = 0;
     btn.classList.add("hide");
