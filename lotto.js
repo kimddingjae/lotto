@@ -89,7 +89,7 @@ document.getElementById("btn").addEventListener("click", function () {
     lottery();
     setTimeout(function () {
       (tmp = 1), btn.classList.remove("hide");
-    }, 2000 * cnt);
+    }, 3500 * cnt);
   }
 });
 
