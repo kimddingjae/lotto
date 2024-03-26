@@ -131,6 +131,15 @@ input[type="text"] {
   font-weight: bold;
 }
 
+.minus{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  float: inline-end;
+  border: 1px solid;
+  border-radius: 20px;
+}
+
 #btn {
   position: relative;
   display: noe;
