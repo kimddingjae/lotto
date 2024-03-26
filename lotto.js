@@ -89,7 +89,7 @@ document.getElementById("btn").addEventListener("click", function () {
   }
 });
 
-function minusClick(e,element) {
-  e.preventDefault();
+function minusClick(element) {
   console.log(element);
+  element.remove();
 }
