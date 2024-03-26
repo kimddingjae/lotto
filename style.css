@@ -133,15 +133,15 @@ input[type="text"] {
 
 .minus{
   position: relative;
-  width: 30px;
-  height: 10px;
-  float: inline-end;
-  border: 1px solid;
-  border-radius: 20px;
-  border-color:pink;
-  color:pink;
-  text-align:center;
-  font-size: 30px;
+    width: 30px;
+    height: 15px;
+    float: inline-end;
+    border: 1px solid;
+    border-radius: 20px;
+    border-color: red;
+    color: red;
+    text-align: center;
+    margin-left: 10px;
 }
 
 #btn {
