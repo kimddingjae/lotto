@@ -58,7 +58,6 @@ document.getElementById("input").addEventListener("click", function () {
     ballBonus.innerText = "?";
     minus.classList += "minus";
     minus.innerText = "-";
-    container.appendChild(minus);
     container.appendChild(ballBlue1);
     container.appendChild(ballBlue2);
     container.appendChild(ballBlue3);
@@ -67,6 +66,7 @@ document.getElementById("input").addEventListener("click", function () {
     container.appendChild(ballGrey);
     container.appendChild(plus);
     container.appendChild(ballBonus);
+    container.appendChild(minus);
     container.classList += "numbers";
     
     
