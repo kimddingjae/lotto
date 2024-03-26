@@ -78,7 +78,9 @@ document.getElementById("input").addEventListener("click", function () {
 
 document.getElementById("btn").addEventListener("click", function () {
   if (tmp === 1) {
-    const cnt = price.value / 1000;
+    
+    const cnt = document.getElementsByClassName("numbers").length;
+    
     numbers = Array.from({ length: 45 }, (_, i) => i + 1);
     tmp = 0;
     btn.classList.add("hide");
@@ -90,6 +92,5 @@ document.getElementById("btn").addEventListener("click", function () {
 });
 
 function minusClick(element) {
-  console.log(element);
   element.remove();
 }
