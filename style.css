@@ -191,9 +191,13 @@ input[type="text"] {
 }
 
 @media screen and (max-width: 800px) {
-  .numbers {
-    flex-direction: row;
+  .numbers {flex-direction: row;
+    
     align-items: center;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    position: relative;
   }
 
   .numbers .ball {
