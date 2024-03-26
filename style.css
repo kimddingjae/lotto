@@ -1,0 +1,206 @@
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@keyframes done {
+  70% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+html {
+  font-family: BMJUA;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body,
+div,
+button,
+h1 {
+  font: inherit;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  background: 0;
+}
+form {
+  width: 100%;
+  padding-bottom: 10px;
+}
+#input_title {
+  position: relative;
+  margin-bottom: 5px;
+  width: 100%;
+  left: 0;
+}
+input[type="text"] {
+  position: relative;
+  width: 80%;
+  height: 40px;
+  left: 0;
+}
+#input {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  float: inline-end;
+  border: 1px solid;
+  border-radius: 20px;
+}
+
+#title {
+  font-size: 3rem;
+  margin: 2rem 0;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+#numbers {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 3px solid pink;
+  border-radius: 20px;
+}
+
+.numbers {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 3px solid pink;
+  border-radius: 20px;
+}
+
+.numbers .ball {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  line-height: 40px;
+  font-size: 25px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.numbers .ball.blue {
+  background: #69c8f2;
+}
+
+.numbers .ball.red {
+  background: #ff7272;
+}
+
+.numbers .ball.grey {
+  background: #aaa;
+}
+
+.numbers .ball.bonus {
+  background: #b0d840;
+}
+
+.numbers .ball.done {
+  animation: done 0.3s linear;
+}
+
+.numbers .ball:last-child {
+  margin-right: 0;
+}
+
+.numbers .plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+#btn {
+  position: relative;
+  display: noe;
+  padding: 1rem 2.5rem 1.6rem;
+  background: #fff;
+  color: #666;
+  border: 2px solid #666;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: 0.5s;
+  user-select: none;
+}
+
+#btn.show {
+  position: relative;
+  display: block;
+  padding: 1rem 2.5rem 1.6rem;
+  background: #fff;
+  color: #666;
+  border: 2px solid #666;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: 0.5s;
+  user-select: none;
+}
+#btn:hover {
+  padding: 1rem 2.5rem 1rem;
+  margin-top: 0.6rem;
+  background: #999;
+  color: #fff;
+}
+
+#btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  height: 0.6rem;
+  width: 100%;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #666,
+    #666 1px,
+    transparent 2px,
+    transparent 5px
+  );
+  border-top: 1px solid #666;
+  transition: 0.5s;
+}
+
+#btn:hover::after {
+  transform: translateY(0.6rem);
+}
+
+#btn.hide {
+  transform: scale(0);
+}
+
+@media screen and (max-width: 800px) {
+  .numbers {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .numbers .ball {
+    margin-right: 0;
+  }
+
+  .numbers .ball:last-child {
+    margin-bottom: 0;
+  }
+}

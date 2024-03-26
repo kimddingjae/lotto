@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>로또 추첨기</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <h1 id="title">Lotto</h1>
+      <form id="input_form">
+        <div id="input_title">구매금액을 입력해주세요.(천단위)</div>
+        <input
+          id="price"
+          name="price"
+          type="text"
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+          maxlength="6"
+        />
+        <button id="input">확인</button>
+      </form>
+      <div id="box"></div>
+      <button id="btn">시작!</button>
+    </div>
+    <script src="lotto.js"></script>
+  </body>
+</html>
