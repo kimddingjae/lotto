@@ -28,7 +28,7 @@ function lottery() {
 document.getElementById("input").addEventListener("click", function () {
   event.preventDefault();
 
-  const cnt = price.value / 5000;
+  const cnt = price.value / 1000;
   for (var i = 0; i < cnt; i++) {
     const container = document.createElement("div");
     const ballBlue1 = document.createElement("div");
@@ -72,10 +72,10 @@ document.getElementById("btn").addEventListener("click", function () {
   if (tmp === 1) {
     numbers = Array.from({ length: 45 }, (_, i) => i + 1);
     tmp = 0;
-    btn.classList.add("hide");
+    //btn.classList.add("hide");
     lottery();
-    setTimeout(function () {
-      (tmp = 1), btn.classList.remove("hide");
-    }, 7500);
+    //setTimeout(function () {
+    //  (tmp = 1), btn.classList.remove("hide");
+    //}, 7500);
   }
 });
