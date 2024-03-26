@@ -3,6 +3,8 @@ let numbers;
 const input_form = document.getElementById("input_form");
 const price = document.getElementById("price");
 const box = document.getElementById("box");
+
+
 function decryptEffect(element, time) {
   const effect = setInterval(() => {
     element.innerText = Math.floor(Math.random() * 44 + 1);
@@ -87,7 +89,7 @@ document.getElementById("btn").addEventListener("click", function () {
     lottery();
     setTimeout(function () {
       (tmp = 1), btn.classList.remove("hide");
-    }, 7500 * cnt);
+    }, 2000 * cnt);
   }
 });
 
