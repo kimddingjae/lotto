@@ -212,11 +212,11 @@ input[type="text"] {
   .numbers {flex-direction: row;
     
     align-items: center;
-    /*
+    
     left: 5%;
     right: 5%;
     width: 90%;
-    */        
+           
     position: relative;
   }
 
