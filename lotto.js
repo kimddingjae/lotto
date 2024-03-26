@@ -17,7 +17,7 @@ function decryptEffect(element, time) {
     element.classList.add("done");
     element.innerText = numbers[random];
     numbers.splice(random, 1);
-  }, time * 500);
+  }, time * 250);
 }
 
 function lottery() {
@@ -89,7 +89,7 @@ document.getElementById("btn").addEventListener("click", function () {
     lottery();
     setTimeout(function () {
       (tmp = 1), btn.classList.remove("hide");
-    }, 3500 * cnt);
+    }, 1800 * cnt);
   }
 });
 
