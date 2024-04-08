@@ -4,36 +4,58 @@ const input_form = document.getElementById("input_form");
 const price = document.getElementById("price");
 const box = document.getElementById("box");
 
-
+let yn = "Y";
+/*
 function decryptEffect(element, time) {
   const effect = setInterval(() => {
     element.innerText = Math.floor(Math.random() * 44 + 1);
   }, 10);
-  
+
   setTimeout(() => {
     const random = Math.floor(Math.random() * numbers.length);
 
     clearInterval(effect);
     element.classList.add("done");
     element.innerText = numbers[random];
+
     numbers.splice(random, 1);
   }, time * 250);
 }
+*/
 
 function lottery() {
-  document.querySelectorAll(".ball").forEach((element, index) => {
-    element.classList.remove("done");
-    decryptEffect(element, index);
-  });
+  const cnt = document.getElementsByClassName("numbers").length;
+
+  for (var i = 0; i < cnt; i++) {
+    numbers = Array.from({ length: 45 }, (_, i) => i + 1);
+
+    var parentElement = document.querySelectorAll("#lotto" + i + " .ball");
+
+    for (var j = 0; j < parentElement.length; j++) {
+      var element = document.querySelectorAll("#lotto" + i + " .ball")[j];
+      element.classList.remove("done");
+
+      const random = Math.floor(Math.random() * numbers.length);
+
+      element.classList.add("done");
+      element.innerText = numbers[random];
+
+      numbers.splice(random, 1);
+    }
+  }
 }
 
 document.getElementById("input").addEventListener("click", function () {
   event.preventDefault();
 
+  document.querySelectorAll(".numbers").forEach((element, index) => {
+    minusClick(element);
+  });
+
   const cnt = price.value / 1000;
   for (var i = 0; i < cnt; i++) {
     const container = document.createElement("div");
-    const minus     = document.createElement("div");
+    const minus = document.createElement("div");
     const ballBlue1 = document.createElement("div");
     ballBlue1.classList += "ball blue";
     ballBlue1.innerText = "?";
@@ -60,36 +82,38 @@ document.getElementById("input").addEventListener("click", function () {
     ballBonus.innerText = "?";
     minus.classList += "minus";
     minus.innerText = "-";
-    minus.addEventListener("click", function(){ event.preventDefault(); minusClick(container);});
+    minus.addEventListener("click", function () {
+      event.preventDefault();
+      minusClick(container);
+    });
     container.appendChild(ballBlue1);
     container.appendChild(ballBlue2);
     container.appendChild(ballBlue3);
     container.appendChild(ballRed1);
     container.appendChild(ballRed2);
     container.appendChild(ballGrey);
-    container.appendChild(plus);
-    container.appendChild(ballBonus);
-    container.appendChild(minus);
+
     container.classList += "numbers";
     container.id = "lotto" + i;
-    
-    
+
     box.appendChild(container);
   }
 });
 
 document.getElementById("btn").addEventListener("click", function () {
   if (tmp === 1) {
-    
     const cnt = document.getElementsByClassName("numbers").length;
-    
+
     numbers = Array.from({ length: 45 }, (_, i) => i + 1);
+
     tmp = 0;
-    btn.classList.add("hide");
+    //btn.classList.add("hide");
+
     lottery();
+
     setTimeout(function () {
       (tmp = 1), btn.classList.remove("hide");
-    }, 1800 * cnt);
+    }, 1);
   }
 });
 

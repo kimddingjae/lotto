@@ -24,9 +24,9 @@ html {
   box-sizing: border-box;
 }
 
-body{
+body {
   touch-action: pan-x pan-y;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 body,
@@ -136,17 +136,17 @@ input[type="text"] {
   font-weight: bold;
 }
 
-.minus{
+.minus {
   position: relative;
-    width: 30px;
-    height: 15px;
-    float: inline-end;
-    border: 1px solid;
-    border-radius: 20px;
-    border-color: red;
-    color: red;
-    text-align: center;
-    margin-left: 10px;
+  width: 30px;
+  height: 15px;
+  float: inline-end;
+  border: 1px solid;
+  border-radius: 20px;
+  border-color: red;
+  color: red;
+  text-align: center;
+  margin-left: 10px;
 }
 
 #btn {
@@ -209,19 +209,20 @@ input[type="text"] {
 }
 
 @media screen and (max-width: 800px) {
-  .numbers {flex-direction: row;
-    
+  .numbers {
+    flex-direction: row;
+
     align-items: center;
-    
+
     left: 5%;
     right: 5%;
     width: 90%;
-           
+
     position: relative;
   }
 
   .numbers .ball {
-    margin-right: 0;
+    margin-right: 5px;
   }
 
   .numbers .ball:last-child {
